@@ -8,7 +8,7 @@ Type=Application
 Terminal=false
 Exec=sudo /home/${OUTPUT}/hgytkfdfgtyuuuuu/Dolphin/Browsers/Dolphin.AppImage --no-sandbox
 Name=Dolphin
-Icon=/home/${OUTPUT}/hgytkfdfgtyuuuuu/Dolphin/Browsers/DolphinLogo.png"
+Icon=/home/${OUTPUT}/hgytkfdfgtyuuuuu/Dolphin/DolphinLogo.png"
 echo "$var" > "/home/$(whoami)/Desktop/Dolphin.Desktop"
 
 sudo chmod ugo+rwx /home/$(whoami)/Desktop/Dolphin.Desktop
