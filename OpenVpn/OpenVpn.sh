@@ -1,6 +1,8 @@
 #!/bin/bash
 
-read -p "Paste full server url: " openvpn
+read -p "Paste server ip: " openvpn
+
+read -p "Paste server pass: " pass
 
 sudo ufw --force disable
 sudo ufw --force reset
@@ -11,9 +13,11 @@ sudo service openvpn stop
 
 sudo apt update
 sudo apt install openvpn -y
+sudo apt install sshpass -y
 
 
-sudo wget -O /etc/openvpn/OpenVPNConfigFile.conf $openvpn
+sudo sshpass -p $pass scp -r $openvpn:/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf
+
 
 sudo echo 'AUTOSTART="all"' > /etc/default/temp_file
 sudo cat /etc/default/openvpn >> /etc/default/temp_file
