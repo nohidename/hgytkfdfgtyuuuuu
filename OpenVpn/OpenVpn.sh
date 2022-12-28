@@ -16,7 +16,7 @@ sudo apt install openvpn -y
 sudo apt install sshpass -y
 
 
-sudo sshpass -p $pass scp -r $openvpn:/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf
+sudo sshpass -p $pass scp $openvpn:/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf
 
 
 sudo echo 'AUTOSTART="all"' > /etc/default/temp_file
