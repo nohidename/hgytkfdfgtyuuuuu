@@ -12,7 +12,8 @@ sudo service openvpn stop
 sudo apt update
 sudo apt install openvpn -y
 
-sudo scp $(openvpn):/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf
+command="sudo scp " + $openvpn + ":/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf"
+echo $command | bash
 
 
 sudo echo 'AUTOSTART="all"' > /etc/default/temp_file
