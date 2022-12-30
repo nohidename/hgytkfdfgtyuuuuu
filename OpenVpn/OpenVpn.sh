@@ -12,8 +12,14 @@ sudo service openvpn stop
 sudo apt update
 sudo apt install openvpn -y
 
-command="sudo scp " + $openvpn + ":/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf"
-echo $command | bash
+gnome-terminal -e "scp root@${openvpn}:/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf"
+
+PID=$(pidof gnome-terminal-server)
+while s=`ps -p $PID -o s=` && [[ "$s" && "$s" != 'Z' ]]; do
+    sleep 1
+done
+
+
 
 
 sudo echo 'AUTOSTART="all"' > /etc/default/temp_file
@@ -39,3 +45,4 @@ sudo service openvpn restart
 
 exit 0
 END
+
