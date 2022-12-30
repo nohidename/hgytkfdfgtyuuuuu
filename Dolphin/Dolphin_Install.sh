@@ -9,9 +9,9 @@ OUTPUT=$(whoami)
 var="[Desktop Entry]
 Type=Application
 Terminal=true
-Exec=sudo gnome-terminal -e "bash /home/$(whoami)/hgytkfdfgtyuuuuu/OpenVpn/OpenVpn.sh"
+Exec=sudo gnome-terminal -e 'bash /home/$(whoami)/hgytkfdfgtyuuuuu/OpenVpn/OpenVpn.sh'
 Name=OpenVPN
-Icon=/home/${OUTPUT}/hgytkfdfgtyuuuuu/Dolphin/clipart2400567.png"
+Icon=/home/${OUTPUT}/hgytkfdfgtyuuuuu/Dolphin/OpenVPN.png"
 echo "$var" > "/home/$(whoami)/Desktop/OpenVPN.Desktop"
 
 var="[Desktop Entry]
