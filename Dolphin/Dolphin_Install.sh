@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install update && sudo apt install gnome-terminal -y
+sudo apt update && sudo apt install gnome-terminal -y
 
 mkdir -p /home/$(whoami)/hgytkfdfgtyuuuuu/Dolphin/Browsers
 wget -O /home/$(whoami)/hgytkfdfgtyuuuuu/Dolphin/Browsers/Dolphin.AppImage https://anty.dolphin.ru.com/download/?platform=linux
