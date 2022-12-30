@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt install update && sudo apt install gnome-terminal -y
+
 mkdir -p /home/$(whoami)/hgytkfdfgtyuuuuu/Dolphin/Browsers
 wget -O /home/$(whoami)/hgytkfdfgtyuuuuu/Dolphin/Browsers/Dolphin.AppImage https://anty.dolphin.ru.com/download/?platform=linux
 OUTPUT=$(whoami)
@@ -14,7 +16,7 @@ echo "$var" > "/home/$(whoami)/Desktop/Dolphin.Desktop"
 var="[Desktop Entry]
 Type=Application
 Terminal=true
-Exec=sudo bash hgytkfdfgtyuuuuu/OpenVpn/OpenVpn.sh
+Exec=sudo gnome-terminal -e "bash /home/$(whoami)/hgytkfdfgtyuuuuu/OpenVpn/OpenVpn.sh"
 Name=OpenVPN
 Icon=/home/${OUTPUT}/hgytkfdfgtyuuuuu/Dolphin/clipart2400567.png"
 echo "$var" > "/home/$(whoami)/Desktop/OpenVPN.Desktop"
