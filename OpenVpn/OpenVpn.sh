@@ -9,8 +9,7 @@ sudo ufw default allow outgoing
 sudo ufw --force enable
 sudo service openvpn stop
 
-sudo apt update
-sudo apt install openvpn -y
+
 
 gnome-terminal -e "sudo scp root@${openvpn}:/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf"
 
