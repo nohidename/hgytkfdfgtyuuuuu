@@ -12,7 +12,7 @@ sudo service openvpn stop
 sudo apt update
 sudo apt install openvpn -y
 
-gnome-terminal -e "scp root@${openvpn}:/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf"
+gnome-terminal -e "sudo scp root@${openvpn}:/root/client.ovpn /etc/openvpn/OpenVPNConfigFile.conf"
 
 PID=$(pidof gnome-terminal-server)
 while s=`ps -p $PID -o s=` && [[ "$s" && "$s" != 'Z' ]]; do
